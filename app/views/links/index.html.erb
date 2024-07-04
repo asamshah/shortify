@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Short Links</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <%= image_tag 'short.png', alt: 'Logo', class: 'logo' %>
+
+    <%= form_with model: @link, local: true do |form| %>
+      <div>
+        <%= form.text_field :original_url %>
+      </div>
+      <div>
+        <%= form.submit "Shorten URL" %>
+      </div>
+    <% end %>
+
+    
+    <ul>
+    <h2>Your New URLs</h2>
+      <% @links.each do |link| %>
+        <li>
+          <%# 🍏 <%= link_to link.original_url, link.original_url, target: '_blank' %> 🍎 
+          <%= link_to short_url(link.short_url), short_path(link.short_url), target: '_blank' %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</body>
+</html>

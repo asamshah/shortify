@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Original URL</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Original URL</h1>
+    <p><%= link_to @link.original_url, @link.original_url, target: '_blank' %></p>
+
+    <h2>Short URL</h2>
+    <p><%= link_to short_url(@link.short_url), short_path(@link.short_url), target: '_blank' %></p>
+  </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(to right, rgb(252,218,147), rgb(253,239,219));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  /* background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px #000000 solid;
+}
+
+input[type="submit"] {
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  padding: 15px 20px;
+  width: 320px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  background-color: #DBC9FF;
+  border: 2px #000000 solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 100px;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.urls {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.url-column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.url {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.url a {
+  color: #007bff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+.url a:hover {
+  border-bottom: 2px solid #007bff;
+}
+
+.logo {
+  width: 300px; /* Adjust the width as needed */
+  padding-bottom: 30px;
+  height: auto; /* This keeps the aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the logo horizontally */
+}
