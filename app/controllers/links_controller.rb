@@ -17,6 +17,14 @@ class LinksController < ApplicationController
     end
   
     def show
+      @link = Link.find_by!(short_url: params[:short_url])
+      redirect_to @link.original_url
+    end
+
+    def destroy
+      @link = Link.find(params[:id])
+      @link.destroy
+      redirect_to links_path, notice: 'Link was successfully deleted.'
     end
   
     def redirect
